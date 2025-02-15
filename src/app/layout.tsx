@@ -11,33 +11,40 @@ import { Source_Code_Pro } from "next/font/google";
 
 import { person, home } from "@/app/resources/content";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
+import { Metadata } from "next";
 
-export async function generateMetadata() {
-  return {
-    metadataBase: new URL(`https://${baseURL}`),
-    title: home.title,
-    description: home.description,
-    openGraph: {
-      title: `${person.firstName}'s Portfolio`,
-      description: "Portfolio website showcasing my work.",
-      url: baseURL,
-      siteName: `${person.firstName}'s Portfolio`,
-      locale: "en_US",
-      type: "website",
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
+export const metadata: Metadata = {
+  title: `${person.name}'s Portfolio`,
+  description: person.role,
+  icons: {
+    icon: [
+      {
+        url: "/images/avatar.jpg",
+        sizes: "32x32",
       },
-    },
-  };
-}
+      {
+        url: "/images/avatar.jpg",
+        sizes: "16x16",
+      }
+    ],
+    shortcut: "/images/avatar.jpg",
+    apple: "/images/avatar.jpg",
+  },
+  openGraph: {
+    images: [
+      {
+        url: "/images/avatar.jpg",
+        width: 800,
+        height: 800,
+        alt: person.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    images: ["/images/avatar.jpg"],
+  },
+};
 
 const primary = Inter({
   variable: "--font-primary",
