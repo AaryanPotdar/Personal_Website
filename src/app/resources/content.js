@@ -1,15 +1,15 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Aaryan",
+  lastName: "Potdar",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Incoming @ Slack | CS + Econ @ Georgia Tech | Prev @ Deloitte",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "Atlanta/San Francisco",
+  languages: [], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -29,22 +29,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/AaryanPotdar",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "X",
-    icon: "x",
-    link: "",
-  },
-  {
-    name: "Email",
-    icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "https://www.linkedin.com/in/aaryan-potdar-5b9b1b235/",
   },
 ];
 
@@ -52,11 +42,13 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Engineer, Strategist and Builder</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+    Hey, I'm Aaryan. I'm a Computer Science + Economics student at <InlineCode>Georgia Tech</InlineCode>.
+    Currently, an incoming Technical Program Management intern at <InlineCode>Slack</InlineCode>,
+    a Senior Consultant at <InlineCode>UCC @ GT</InlineCode>,
+    and a Research Lead at <InlineCode>Data Science @ GT</InlineCode>.
     </>
   ),
 };
@@ -81,205 +73,191 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I'm passionate about solving complex problems at the intersection of technology, strategy, and data. Whether I'm optimizing AI models, architecting scalable systems, or driving impact through consulting, I take a hands-on, analytical approach to building solutions that matter.
+       <br></br>
+       <br></br>
+        My experience spans software engineering, AI research, and strategic problem-solving—giving me a unique perspective on bridging technical excellence with real-world applications.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Slack",
+        timeframe: "May 2025 - Aug 2025",
+        role: "Data Engineering TPM Intern",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Incoming Summer 2025
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-01.jpg",
+          //   alt: "Once UI Project",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "PwC",
+        timeframe: "Sept 2024 - Oct 2024",
+        role: "Product Strategy Extern",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Provided strategic recommendations for expanding The Arc of Indiana Foundation's digital outreach, including
+            enhanced website features with visualizations and analytics to increase engagement by 45%.
           </>,
         ],
         images: [],
       },
+      {
+        company: "Deloitte",
+        timeframe: "June 2024 - Aug 2024",
+        role: "Cyber & Strategy Risk Intern",
+        achievements: [
+          <>
+          Conducted Security Configuration Assessments of IT and Cloud infrastructure (AWS) for 3 Banking sector clients.
+          Evaluated 63 security solutions and provided remediation to achieve 100% security compliance.  
+          </>,
+          <>
+          Prepared and reviewed Secure Configuration Documents for 20+ Database, Linux, Windows and Web servers.
+          </>,
+          <>
+          Developed weekly compliance and audit dashboards, enhancing internal efficiency and client delivery outcomes.
+          </>
+        ],
+        images: [],
+      },
+      {
+        company: "Molecular Evolution Core Lab",
+        timeframe: "May 2024 - Aug 2024",
+        role: "Software Engineer",
+        achievements: [
+          <>
+          Managed implementation of a Laboratory Information Management System using MERN stack, serving 2k+ users. 
+          </>,
+          <>
+          Composed production & development Dockerfiles to containerize application, reducing deployment time by 35%.
+          </>,
+          <>
+          Managed bi-weekly sprints and integrated Kanban & Agile methodologies, increasing operational efficiency by 30%.
+          </>,
+          <>
+          Implemented a one-way aggregation pipeline to mask sensitive data, ensuring data privacy regulation compliance.
+          </>
+        ],
+        images: [],
+      },
+      {
+        company: "HP Tech Ventures",
+        timeframe: "Feb 2024 - April 2024",
+        role: "Business Analyst Extern",
+        achievements: [
+          <>
+          Developed growth strategies for 5 global startups based on startup metrics, product features and business models.
+          </>,
+          <>
+          Cleaned large datasets (50k+ rows) using Open Refine, SQL and visualized industry data trends in Tableau.
+          </>,
+          <>
+          Recommended high-potential startups and presented pitch deck on Coefficient.io for further investment due diligence.
+          </>
+        ],
+        images: [],
+      },
+      {
+        company: "Temple Allen Industries",
+        timeframe: "May 2023 - Aug 2023",
+        role: "Machine Learning Engineer Intern",
+        achievements: [
+          <>
+          Designed an enhanced depth data capture solution, generating $8k+ in cost savings on mechanical arms.
+          </>,
+          <>
+          Implemented real-time reconstruction of airplane surface, improving efficiency of Boeing's Paint Operations by 58%.
+          </>,
+          <>
+          Pre-processed dataset of 270k+ images using OpenCV to train end effector Pose Estimation model with 94.5%
+          accuracy, enhancing robotic arm precision in sanding airplane surfaces.
+          </>
+        ],
+        images: [],
+      }
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
+        name: "Georgia Institute of Technology",
+        description: <>Bachelor of Science in Computer Science, specializing in Intelligence & Information Networks • Minor in Economics • GPA: 3.93 • 4x Faculty Honors</>,
+      }
     ],
   },
-  technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
+  
+  leadership: {
+    display: true,
+    title: "Leadership & Community",
+    roles: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        organization: "Product @ GT",
+        role: "Product Manager",
+        achievements: [
+          <>
+            Project & Solution Discovery, User Research for a self-sustaining community garden for Cox Automotive.
+          </>,
         ],
+        images: [],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        organization: "Undergraduate Consulting Club @ GT",
+        role: "Senior Consultant",
+        achievements: [
+          <>
+            Market entry & Brand positioning, Customer experience & Retention Strategy for local business - Nom Station.
+          </>,
         ],
+        images: [],
       },
+      {
+        organization: "CLEF Research Group",
+        role: "Research Lead",
+        achievements: [
+          <>
+            Organized 14 8-hour hack sessions across 11 teams. Co-authored eRisk paper - accepted to CLEF 2024 conference.
+          </>,
+          <>
+            Managed budget of $2k in Google Cloud credits and optimized costs by right-sizing Compute Engine instances.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        organization: "Data Science @ GT",
+        role: "Project Lead",
+        achievements: [
+          <>
+            Led a team of 7 data scientists and software engineers to develop a Win Probability model for forecasting GT Basketball's games and strategically select their non-conference opponents to enhance NCAA championship prospects.
+          </>,
+        ],
+        images: [],
+      }
     ],
   },
-};
-
-const blog = {
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
 };
 
 const work = {
-  label: "Work",
+  label: "Projects",
   title: "My projects",
-  description: `Design and dev projects by ${person.name}`,
+  description: `Projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
 
-const gallery = {
-  label: "Gallery",
-  title: "My photo gallery",
-  description: `A photo collection by ${person.name}`,
-  // Images from https://pexels.com
-  images: [
-    {
-      src: "/images/gallery/img-01.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-02.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-03.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-04.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-05.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-06.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-07.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-08.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-09.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-10.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-11.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-12.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-13.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-14.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-  ],
-};
-
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, work };

@@ -1,12 +1,7 @@
 import React from "react";
-
-import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column } from "@/once-ui/components";
-import { Projects } from "@/components/work/Projects";
-
-import { baseURL, routes } from "@/app/resources";
-import { home, about, person, newsletter } from "@/app/resources/content";
-import { Mailchimp } from "@/components";
-import { Posts } from "@/components/blog/Posts";
+import { Heading, Flex, Text, Button, Avatar, Column } from "@/once-ui/components";
+import { baseURL } from "@/app/resources";
+import { home, person, about } from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = home.title;
@@ -21,12 +16,7 @@ export async function generateMetadata() {
       description,
       type: "website",
       url: `https://${baseURL}`,
-      images: [
-        {
-          url: ogImage,
-          alt: title,
-        },
-      ],
+      images: [{ url: ogImage, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
@@ -40,80 +30,78 @@ export async function generateMetadata() {
 export default function Home() {
   return (
     <Column maxWidth="m" gap="xl" horizontal="center">
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: home.title,
-            description: home.description,
-            url: `https://${baseURL}`,
-            image: `${baseURL}/og?title=${encodeURIComponent(home.title)}`,
-            publisher: {
-              "@type": "Person",
-              name: person.name,
-              image: {
-                "@type": "ImageObject",
-                url: `${baseURL}${person.avatar}`,
-              },
-            },
-          }),
-        }}
-      />
       <Column fillWidth paddingY="l" gap="m">
         <Column maxWidth="s">
-          <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="m">
-            <Heading wrap="balance" variant="display-strong-l">
-              {home.headline}
-            </Heading>
-          </RevealFx>
-          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="m">
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
-              {home.subline}
-            </Text>
-          </RevealFx>
-          <RevealFx translateY="12" delay={0.4} horizontal="start">
-            <Button
-              id="about"
-              data-border="rounded"
-              href="/about"
-              variant="secondary"
-              size="m"
-              arrowIcon
-            >
-              <Flex gap="8" vertical="center">
-                {about.avatar.display && (
-                  <Avatar
-                    style={{ marginLeft: "-0.75rem", marginRight: "0.25rem" }}
-                    src={person.avatar}
-                    size="m"
-                  />
-                )}
-                {about.title}
-              </Flex>
-            </Button>
-          </RevealFx>
+          <Heading wrap="balance" variant="display-strong-l">
+            {home.headline}
+          </Heading>
+          <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl" paddingBottom="24">
+            {home.subline}
+          </Text>
+
+          {/* About Button */}
+          <Button
+            id="about"
+            data-border="rounded"
+            href="/about"
+            variant="secondary"
+            size="m"
+            arrowIcon
+          >
+            <Flex gap="8" vertical="center">
+              {about.avatar.display && (
+                <Avatar
+                  style={{ marginLeft: "-0.75rem", marginRight: "0.25rem" }}
+                  src={person.avatar}
+                  size="m"
+                />
+              )}
+              {about.title}
+            </Flex>
+          </Button>
+
+          {/* Featured Section */}
+          <Flex fillWidth paddingTop="40" gap="24" direction="column">
+            <Heading variant="display-strong-s">Projects</Heading>
+            <Flex gap="16" wrap>
+              <Button
+                href="https://github.com/AaryanPotdar/Loyalty_UI/tree/main/loyalty-app"
+                variant="secondary"
+                size="m"
+              >
+                Nom Station Loyalty Program UI
+              </Button>
+              <Button
+                href="https://devpost.com/software/nl2ar"
+                variant="secondary"
+                size="m"
+              >
+                speakAR
+              </Button>
+              <Button
+                href="https://touche-2025-rad.dsgt-kaggle.org/"
+                variant="secondary"
+                size="m"
+              >
+                Retrieval-Augmented Debating AI
+              </Button>
+            </Flex>
+          </Flex>
+
+          {/* Quick Links */}
+          {/* <Flex fillWidth paddingTop="32" gap="16" direction="column">
+            <Text variant="heading-strong-s">Quick Links</Text>
+            <Flex gap="12" wrap>
+              <Button href="/resume.pdf" variant="secondary" size="s" prefixIcon="document">
+                Resume
+              </Button>
+              <Button href="https://cal.com/your-calendar" variant="secondary" size="s" prefixIcon="calendar">
+                Schedule a Call
+              </Button>
+            </Flex>
+          </Flex> */}
         </Column>
       </Column>
-      <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} />
-      </RevealFx>
-      {routes["/blog"] && (
-        <Flex fillWidth gap="24" mobileDirection="column">
-          <Flex flex={1} paddingLeft="l">
-            <Heading as="h2" variant="display-strong-xs" wrap="balance">
-              Latest from the blog
-            </Heading>
-          </Flex>
-          <Flex flex={3} paddingX="20">
-            <Posts range={[1, 2]} columns="2" />
-          </Flex>
-        </Flex>
-      )}
-      <Projects range={[2]} />
-      {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
   );
 }

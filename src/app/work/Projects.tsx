@@ -1,5 +1,5 @@
 import { getPosts } from "@/app/utils/utils";
-import { Column, Button, Text } from "@/once-ui/components";
+import { Column } from "@/once-ui/components";
 import { ProjectCard } from "@/components";
 
 interface ProjectsProps {
@@ -8,7 +8,7 @@ interface ProjectsProps {
 
 export function Projects({ range }: ProjectsProps) {
   let allProjects = getPosts(["src", "app", "work", "projects"]);
-
+  
   const sortedProjects = allProjects.sort((a, b) => {
     return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
   });
@@ -22,24 +22,14 @@ export function Projects({ range }: ProjectsProps) {
       {displayedProjects.map((post, index) => (
         <ProjectCard
           priority={index < 2}
-          key={post.slug}
-          href={`work/${post.slug}`}
+          key={`${post.metadata.title}-${index}`}
           images={post.metadata.images}
           title={post.metadata.title}
-          description={post.metadata.summary}
+          description={post.metadata.description}
           content={post.content}
           avatars={post.metadata.team?.map((member) => ({ src: member.avatar })) || []}
-          link={post.metadata.link || ""}
-        >
-          <Button
-            href={`/work/${post.slug}`}
-            variant="secondary"
-            size="m"
-            arrowIcon
-          >
-            View project
-          </Button>
-        </ProjectCard>
+          link={post.metadata.link}
+        />
       ))}
     </Column>
   );
