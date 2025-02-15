@@ -105,18 +105,19 @@ export default function About() {
       )}
       <Flex fillWidth mobileDirection="column" horizontal="center">
         {about.avatar.display && (
-          <Flex
-            position={{ default: "relative", desktop: "fixed" }}
-            top={{ desktop: "120px" }}
-            right={{ desktop: "80px" }}
-            width={{ mobile: "100%", desktop: "320px" }}
+          <Column
+            className={styles.avatar}
+            minWidth="160"
+            paddingX="l"
+            paddingBottom="xl"
             gap="m"
-            direction={{ mobile: "row", desktop: "column" }}
+            flex={3}
+            horizontal="center"
           >
             <Avatar
               src={person.avatar}
-              size={{ mobile: "l", desktop: "2xl" }}
               alt={person.name}
+              size="xl"
             />
             {person.languages.length > 0 && (
               <Flex wrap gap="8">
@@ -127,7 +128,7 @@ export default function About() {
                 ))}
               </Flex>
             )}
-          </Flex>
+          </Column>
         )}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
           <Column
