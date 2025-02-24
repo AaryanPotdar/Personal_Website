@@ -212,11 +212,8 @@ const about = {
         role: "Senior Consultant",
         achievements: [
           <>
-            Spring 2025: Data-Driven Growth Strategy for Piedmont Park Conservancy
+            Market entry & Brand positioning, Customer experience & Retention Strategy for local business - Nom Station.
           </>,
-          <>
-            Fall 2024: Market entry & Brand positioning, Customer experience & Retention Strategy for Nom Station
-          </>
         ],
         images: [],
       },
