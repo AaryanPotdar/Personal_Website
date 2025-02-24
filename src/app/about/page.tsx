@@ -116,7 +116,6 @@ export default function About() {
           >
             <Avatar
               src={person.avatar}
-              alt={person.name}
               size="xl"
             />
             {person.languages.length > 0 && (

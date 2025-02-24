@@ -7,7 +7,7 @@ const person = {
     return `${this.firstName} ${this.lastName}`;
   },
   role: "Incoming @ Slack | CS + Econ @ Georgia Tech | Prev @ Deloitte",
-  avatar: "",
+  avatar: "/images/avatar.jpg",
   location: "Atlanta/San Francisco",
   languages: [], // optional: Leave the array empty if you don't want to display languages
 };

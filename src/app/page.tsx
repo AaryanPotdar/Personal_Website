@@ -65,7 +65,14 @@ export default function Home() {
             <Heading variant="display-strong-s">Projects</Heading>
             <Flex gap="16" wrap>
               <Button
-                href="https://github.com/AaryanPotdar/Loyalty_UI/tree/main/loyalty-app"
+                href="https://devpost.com/software/posturepal-12uehc"
+                variant="secondary"
+                size="m"
+              >
+                PosturePal
+              </Button>
+              <Button
+                href="https://github.com/AaryanPotdar/Loyalty_UI/"
                 variant="secondary"
                 size="m"
               >
